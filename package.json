@@ -1,0 +1,31 @@
+{
+  "name": "projeto_17_api_sing_me_a_song_back_end",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "faker": "^5.5.3",
+    "husky": "7.0.4",
+    "jest": "^27.4.3",
+    "nodemon": "^2.0.15",
+    "prettier": "2.5.0",
+    "supertest": "^6.1.6"
+  }
+}
