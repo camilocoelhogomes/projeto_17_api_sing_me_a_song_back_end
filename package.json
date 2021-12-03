@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=prod node src/server.js",
+    "test": "NODE_ENV=test npx jest -i --watch",
+    "dev": "NODE_ENV=dev nodemon src/server.js "
   },
   "keywords": [],
   "author": "",
@@ -14,7 +16,8 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "joi": "^17.5.0"
+    "joi": "^17.5.0",
+    "pg": "^8.7.1"
   },
   "devDependencies": {
     "eslint": "^8.3.0",
