@@ -11,6 +11,12 @@
     "sourceType": "module"
   },
   "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 140
+      }
+    ],
     "import/extensions": [
       "error",
       {
