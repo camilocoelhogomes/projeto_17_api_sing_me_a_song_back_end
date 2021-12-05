@@ -95,7 +95,6 @@ const getTopRecommendations = async ({ top }) => {
     if (!recommendation.rowCount) return [];
     return (recommendation.rows);
   } catch (error) {
-    console.log(error);
     return [];
   }
 };
