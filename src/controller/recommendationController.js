@@ -1,5 +1,9 @@
-const postRecommendation = (req, res) => {
-  console.log(req.body);
+import recommendationValidate from '../validation/recommendationValidate.js';
+
+const postRecommendation = async (req, res) => {
+  const recommendation = req.body;
+  const isError = await recommendationValidate.newRecommendation(recommendation);
+  console.log(isError);
   res.sendStatus(201);
 };
 
