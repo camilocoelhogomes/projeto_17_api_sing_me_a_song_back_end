@@ -18,7 +18,6 @@ const createVote = async ({ id, type }) => {
         score: recommendation.score,
       },
     );
-  console.log(updatedRecommendation);
   return updatedRecommendation;
 };
 
