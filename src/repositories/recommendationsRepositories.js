@@ -63,7 +63,6 @@ const getRecommendationsByScoreMin = async ({ scoreMin }) => {
     if (!recommendation.rowCount) return [];
     return (recommendation.rows);
   } catch (error) {
-    console.log(error);
     return [];
   }
 };
@@ -79,7 +78,6 @@ const getRecommendationsByScoreMax = async ({ scoreMax }) => {
     if (!recommendation.rowCount) return [];
     return (recommendation.rows);
   } catch (error) {
-    console.log(error);
     return [];
   }
 };

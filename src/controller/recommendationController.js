@@ -20,7 +20,6 @@ const getRecommendation = async (req, res) => {
     if (!recommendation) return res.sendStatus(404);
     return res.status(200).send(recommendation);
   } catch (error) {
-    console.log(error);
     return res.sendStatus(500);
   }
 };
