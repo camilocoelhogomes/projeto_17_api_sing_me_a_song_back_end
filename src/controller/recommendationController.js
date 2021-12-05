@@ -1,10 +1,19 @@
+import recommendationService from '../services/recommendationService.js';
 import recommendationValidate from '../validation/recommendationValidate.js';
 
 const postRecommendation = async (req, res) => {
-  const recommendation = req.body;
-  const isError = await recommendationValidate.newRecommendation(recommendation);
-  console.log(isError);
-  res.sendStatus(201);
+  try {
+    const recommendation = req.body;
+    const isValid = await recommendationValidate.newRecommendation(recommendation);
+    if (!isValid) return res.sendStatus(400);
+    const newRecommendation = await recommendationService.createReacommendations(recommendation);
+    if (!newRecommendation) return res.sendStatus(400);
+    console.log(newRecommendation);
+    return res.status(201).send(newRecommendation[0]);
+  } catch (error) {
+    console.log(error);
+    return res.sendStatus(500);
+  }
 };
 
 const recommendationController = {
