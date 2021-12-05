@@ -82,6 +82,24 @@ const getRecommendationsByScoreMax = async ({ scoreMax }) => {
   }
 };
 
+const getTopRecommendations = async ({ top }) => {
+  try {
+    const recommendation = await connection.query(`
+    SELECT * FROM
+      recommendations
+    ORDER BY
+      score DESC
+    LIMIT $1
+    ;
+    `, [top]);
+    if (!recommendation.rowCount) return [];
+    return (recommendation.rows);
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};
+
 const recommendationsRepositories = {
   createRecommendations,
   deleteRecommendation,
@@ -89,6 +107,7 @@ const recommendationsRepositories = {
   updateRecommendationScore,
   getRecommendationsByScoreMin,
   getRecommendationsByScoreMax,
+  getTopRecommendations,
 };
 
 export default recommendationsRepositories;

@@ -24,9 +24,21 @@ const getRecommendation = async (req, res) => {
   }
 };
 
+const getTopRecommendation = async (req, res) => {
+  const { amount } = req.params;
+  if (Number.isNaN(Number(amount)) || Number(amount) <= 0) return res.sendStatus(400);
+  const recommendatoin = await recommendationService.getTopRecommendations({ top: Number(amount) });
+  try {
+    return res.status(200).send(recommendatoin);
+  } catch (error) {
+    return res.sendStatus(500);
+  }
+};
+
 const recommendationController = {
   postRecommendation,
   getRecommendation,
+  getTopRecommendation,
 };
 
 export default recommendationController;

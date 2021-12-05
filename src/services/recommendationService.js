@@ -25,9 +25,15 @@ const randomRecommendation = async () => {
   return randomRecommendationValue;
 };
 
+const getTopRecommendations = async ({ top }) => {
+  const recommendations = await recommendationsRepositories.getTopRecommendations({ top });
+  return recommendations;
+};
+
 const recommendationService = {
   createReacommendations,
   randomRecommendation,
+  getTopRecommendations,
 };
 
 export default recommendationService;
