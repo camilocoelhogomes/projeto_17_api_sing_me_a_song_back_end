@@ -14,8 +14,19 @@ const postRecommendation = async (req, res) => {
   }
 };
 
+const getRecommendation = async (req, res) => {
+  try {
+    const recommendation = await recommendationService.randomRecommendation();
+    if (!recommendation) return res.sendStatus(404);
+    return res.status(200).send(recommendation);
+  } catch (error) {
+    return res.sendStatus(500);
+  }
+};
+
 const recommendationController = {
   postRecommendation,
+  getRecommendation,
 };
 
 export default recommendationController;
