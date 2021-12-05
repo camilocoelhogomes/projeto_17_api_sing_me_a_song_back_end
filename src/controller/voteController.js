@@ -1,8 +1,7 @@
 const upVote = async (req, res) => {
   const { id } = req.params;
   try {
-    console.log(id);
-    return res.sendStatus(201);
+    return res.status(201).send(id);
   } catch (error) {
     return res.sendStatus(500);
   }
