@@ -48,3 +48,47 @@ describe('get top recommendation', () => {
     expect(result).toEqual(['1', '2']);
   });
 });
+
+describe('get random recommendation', () => {
+  it('shold return an array of recommendations', async () => {
+    jest.spyOn(global.Math, 'random').mockImplementationOnce(() => 0.69);
+    jest
+      .spyOn(recommendationsRepositories, 'getRecommendationsByScoreMin')
+      .mockImplementationOnce(() => [{socre: '11'}]);
+      const result = await recommendationService.randomRecommendation();
+      expect(result).toEqual({socre: '11'});
+  });
+
+  it('shold return an array of recommendations', async () => {
+    jest.spyOn(global.Math, 'random').mockImplementationOnce(() => 0.71);
+    jest
+      .spyOn(recommendationsRepositories, 'getRecommendationsByScoreMax')
+      .mockImplementationOnce(() => [{socre: '6'}]);
+      const result = await recommendationService.randomRecommendation();
+      expect(result).toEqual({socre: '6'});
+  });
+
+  it('shold return an array of recommendations', async () => {
+    jest.spyOn(global.Math, 'random').mockImplementationOnce(() => 0.71);
+    jest
+      .spyOn(recommendationsRepositories, 'getRecommendationsByScoreMin')
+      .mockImplementationOnce(() => [{ socre: '15' }]);
+    jest
+      .spyOn(recommendationsRepositories, 'getRecommendationsByScoreMax')
+      .mockImplementationOnce(() => []);
+      const result = await recommendationService.randomRecommendation();
+      expect(result).toEqual({socre: '15'});
+  });
+  it('shold return an array of recommendations', async () => {
+    jest.spyOn(global.Math, 'random').mockImplementationOnce(() => 0.71);
+    jest
+      .spyOn(recommendationsRepositories, 'getRecommendationsByScoreMin')
+      .mockImplementationOnce(() => []);
+    jest
+      .spyOn(recommendationsRepositories, 'getRecommendationsByScoreMax')
+      .mockImplementationOnce(() => []);
+      const result = await recommendationService.randomRecommendation();
+      expect(result).toEqual([]);
+  });
+});
+

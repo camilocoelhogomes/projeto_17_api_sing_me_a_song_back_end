@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1638791660652" clover="3.2.0">
+  <project timestamp="1638791660652" name="All files">
+    <metrics statements="74" coveredstatements="46" conditionals="34" coveredconditionals="20" methods="11" coveredmethods="4" elements="119" coveredelements="70" complexity="0" loc="74" ncloc="74" packages="3" files="4" classes="4"/>
+    <package name="src">
+      <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="0" coveredmethods="0"/>
+      <file name="dbConfig.js" path="/home/camilo/Documents/BootcampRespondeAi/projeto_17_api_sing_me_a_song_back_end/src/dbConfig.js">
+        <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="2" falsecount="2"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories">
+      <metrics statements="35" coveredstatements="8" conditionals="12" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="recommendationsRepositories.js" path="/home/camilo/Documents/BootcampRespondeAi/projeto_17_api_sing_me_a_song_back_end/src/repositories/recommendationsRepositories.js">
+        <metrics statements="35" coveredstatements="8" conditionals="12" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="78" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="95" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="102" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="34" coveredstatements="34" conditionals="18" coveredconditionals="18" methods="4" coveredmethods="4"/>
+      <file name="recommendationService.js" path="/home/camilo/Documents/BootcampRespondeAi/projeto_17_api_sing_me_a_song_back_end/src/services/recommendationService.js">
+        <metrics statements="21" coveredstatements="21" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+      <file name="voteService.js" path="/home/camilo/Documents/BootcampRespondeAi/projeto_17_api_sing_me_a_song_back_end/src/services/voteService.js">
+        <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
